@@ -1,3 +1,18 @@
-body {
-  color: red;
+#pokemon-list-container{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  background-color: cornflowerblue;
+}
+
+.pokemon-item-container{
+  padding: 25px;
+  margin: 25px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 3px 3px 15px -5px black;
+  text-align: center;
+}
+
+.pokemon-item-container img {
+  width: 150px;
 }
