@@ -21,8 +21,14 @@ class App extends Component {
     /* Add pokemon names dynamically as list items in JSX */
     let pokemonListItem = this.state.pokemonList.map((pokemon) => {
       return (
-        <div>
-          <li>Name: {pokemon.name}, Weight: {pokemon.weight}, Height: {pokemon.height}</li>
+        <div className="pokemon-item-container">
+            <img src={pokemon.image} alt="Pokemon Image"/>
+            <div>Name: {pokemon.name}</div>
+            <div>Weight: {pokemon.weight}</div>
+            <div>Height: {pokemon.height}</div>
+            <div>Health Points: {pokemon.hp}</div>
+            <div>Attack: {pokemon.atk}</div>
+            <div>Defense: {pokemon.def}</div>
         </div>
       )
     })
@@ -30,9 +36,9 @@ class App extends Component {
     return (
       <div className="app" id="app-container">
         <h1>Pokémon React Code-Along</h1>
-        <ul>
-          <li>{pokemonListItem}</li>
-        </ul>
+        <div id="pokemon-list-container">
+          {pokemonListItem}
+        </div>
         {/* { pokemonElArr } */}
       </div>
     );
