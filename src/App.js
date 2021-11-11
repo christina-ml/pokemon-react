@@ -1,6 +1,7 @@
 import { Component } from "react";
 import './App.css';
 import data from './data/sortedData';
+import PokemonCard from "./components/PokemonCard";
 
 class App extends Component {
   constructor(){
@@ -11,13 +12,6 @@ class App extends Component {
   }
 
   render(){
-    /* Add pokemon images dynamically */
-    // let pokemonElArr = this.state.pokemonList.map((pokemonItem) => {
-    //   return (
-    //     <img src={pokemonItem.image} alt="Pokemon Image" />
-    //   )
-    // });
-
     /* Add pokemon names dynamically as list items in JSX */
     let pokemonListItem = this.state.pokemonList.map((pokemon) => {
       return (
