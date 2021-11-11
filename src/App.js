@@ -8,6 +8,7 @@ class App extends Component {
     super()
     this.state = {
       pokemonList: data.pokemon,
+      selectedPokemon: {},
     }
   }
 
@@ -22,10 +23,14 @@ class App extends Component {
     return (
       <div className="app" id="app-container">
         <h1>Pokémon React Code-Along</h1>
+        <div>
+          <h3>Currently Selected Pokemon</h3>
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png" alt="Selected pokemon image" />
+          <div>Pikachu</div>
+        </div>
         <div id="pokemon-list-container">
           { pokemonListItem }
         </div>
-        {/* { pokemonElArr } */}
       </div>
     );
   }
@@ -41,4 +46,14 @@ export default App;
     for (let poke of data.pokemon){
       console.log(poke.name);
     }
+*/
+
+
+/*
+  what this will look like in the object:
+
+  selectedPokemon: {
+    name: '',
+    image: ''
+  },
 */
