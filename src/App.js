@@ -14,25 +14,24 @@ class App extends Component {
     console.log(this.state.pokemonList);
 
     let pokemonElArr = this.state.pokemonList.map((pokemonItem) => {
-      // can return multiple lines to 
       return (
         <img src={pokemonItem.image} alt="Pokemon Image" />
       )
     });
 
-    console.log("pokemonElArr", pokemonElArr); // changed from array of objects. now an array of elements.
+    // console.log("pokemonElArr", pokemonElArr); // changed from array of objects. now an array of elements.
     // [
     //   {
-    //     name: "Bulbasaur",
+    //     name: "Bulbasaur"
     //   },
     //   {
-    //     name: "Ivysaur",
-    //   },
+    //     name: "Ivysaur"
+    //   }
     // ]
 
     // [
-    //   <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png" alt="Bulbasaur" />
-    //   <img src="" alt="" />
+    //   <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png" alt="" />,
+    //   <img src="" alt="" />,
     // ]
 
     return (
