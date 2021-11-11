@@ -5,10 +5,14 @@ class PokemonCard extends Component{
         super();
     }
 
+    handlePokemonClick=()=>{
+        console.log("Trigger");
+    }
+
     render(){
         let { image, name, weight, height, hp, atk, def } = this.props.pokemon;
         return(
-            <div className="pokemon-item-container">
+            <div className="pokemon-item-container" onClick={this.handlePokemonClick}>
                 <img src={image} alt="Pokemon Image"/>
                 <div>Name: {name}</div>
                 <div>Weight: {weight}</div>
