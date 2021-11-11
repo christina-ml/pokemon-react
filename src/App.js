@@ -11,16 +11,27 @@ class App extends Component {
   }
 
   render(){
-    let pokemonElArr = this.state.pokemonList.map((pokemonItem) => {
+    /* Add pokemon images dynamically */
+    // let pokemonElArr = this.state.pokemonList.map((pokemonItem) => {
+    //   return (
+    //     <img src={pokemonItem.image} alt="Pokemon Image" />
+    //   )
+    // });
+
+    /* Add pokemon names dynamically as list items */
+    let pokemonListItem = this.state.pokemonList.map((pokemonItem) => {
       return (
-        <img src={pokemonItem.image} alt="Pokemon Image" />
+        <li>{pokemonItem.name}</li>
       )
-    });
+    })
 
     return (
-      <div claaName="app">
+      <div className="app" id="app-container">
         <h1>Pokémon React Code-Along</h1>
-        { pokemonElArr }
+        <ul>
+          <li>{pokemonListItem}</li>
+        </ul>
+        {/* { pokemonElArr } */}
       </div>
     );
   }
