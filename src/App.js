@@ -27,7 +27,7 @@ class App extends Component {
     /* Add pokemon names dynamically as list items in JSX */
     let pokemonListItem = this.state.pokemonList.map((pokemon) => {
       return (
-        <PokemonCard pokemon={pokemon} handlePokemonClick={this.handlePokemonClick}/>
+        <PokemonCard key={pokemon.id} pokemon={pokemon} handlePokemonClick={this.handlePokemonClick}/>
       )
     })
 
