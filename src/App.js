@@ -11,36 +11,16 @@ class App extends Component {
   }
 
   render(){
-    console.log(this.state.pokemonList);
-
     let pokemonElArr = this.state.pokemonList.map((pokemonItem) => {
       return (
         <img src={pokemonItem.image} alt="Pokemon Image" />
       )
     });
 
-    // console.log("pokemonElArr", pokemonElArr); // changed from array of objects. now an array of elements.
-    // [
-    //   {
-    //     name: "Bulbasaur"
-    //   },
-    //   {
-    //     name: "Ivysaur"
-    //   }
-    // ]
-
-    // [
-    //   <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png" alt="" />,
-    //   <img src="" alt="" />,
-    // ]
-
     return (
-      <div>
+      <div claaName="app">
         <h1>Pokémon React Code-Along</h1>
         { pokemonElArr }
-        <ul>
-
-        </ul>
       </div>
     );
   }
