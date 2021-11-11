@@ -8,7 +8,10 @@ class App extends Component {
     super()
     this.state = {
       pokemonList: data.pokemon,
-      selectedPokemon: {},
+      selectedPokemon: {
+        name: 'No pokemon selected',
+        image: 'https://via.placeholder.com/100'
+      },
     }
   }
 
