@@ -1,25 +1,31 @@
-import logo from './logo.svg';
+import { Component } from "react";
 import './App.css';
+import data from './data/sortedData';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  constructor(){
+    super()
+    this.state = {
+      pokemonList: data.pokemon,
+    }
+  }
+  
+  render(){
+    console.log(this.state.pokemonList)
+    return (
+      <div>Hello Pokémon</div>
+    );
+  }
 }
 
 export default App;
+
+
+
+/*
+    console.log(data.pokemon[0])
+
+    for (let poke of data.pokemon){
+      console.log(poke.name);
+    }
+*/
