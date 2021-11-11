@@ -12,11 +12,19 @@ class App extends Component {
     }
   }
 
+  handlePokemonClick=(pokemon)=>{
+    this.setState({
+      selectedPokemon: pokemon
+    })
+    // console.log(pokemon);
+  }
+
+
   render(){
     /* Add pokemon names dynamically as list items in JSX */
     let pokemonListItem = this.state.pokemonList.map((pokemon) => {
       return (
-        <PokemonCard pokemon={pokemon} />
+        <PokemonCard pokemon={pokemon} handlePokemonClick={this.handlePokemonClick}/>
       )
     })
 
@@ -25,8 +33,8 @@ class App extends Component {
         <h1>Pokémon React Code-Along</h1>
         <div>
           <h3>Currently Selected Pokemon</h3>
-          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png" alt="Selected pokemon image" />
-          <div>Pikachu</div>
+          <img src={this.state.selectedPokemon.image} alt="Selected pokemon image" />
+          <div>{this.state.selectedPokemon.name}</div>
         </div>
         <div id="pokemon-list-container">
           { pokemonListItem }

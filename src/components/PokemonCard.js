@@ -5,14 +5,19 @@ class PokemonCard extends Component{
         super();
     }
 
-    handlePokemonClick=()=>{
-        console.log("Trigger");
+    handlePokemonClick=(name)=>{
+        console.log(name);
     }
 
     render(){
         let { image, name, weight, height, hp, atk, def } = this.props.pokemon;
         return(
-            <div className="pokemon-item-container" onClick={this.handlePokemonClick}>
+            // wrap the onClick in an arrow function, and then invoke it. Can pass information in it.
+            // allows us to pass data, on click.
+            <div 
+                className="pokemon-item-container"
+                onClick={()=>this.props.handlePokemonClick(this.props.pokemon)}
+            >
                 <img src={image} alt="Pokemon Image"/>
                 <div>Name: {name}</div>
                 <div>Weight: {weight}</div>
