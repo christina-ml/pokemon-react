@@ -19,10 +19,10 @@ class App extends Component {
     // });
 
     /* Add pokemon names dynamically as list items in JSX */
-    let pokemonListItem = this.state.pokemonList.map((pokemonItem) => {
+    let pokemonListItem = this.state.pokemonList.map((pokemon) => {
       return (
         <div>
-          <li>{pokemonItem.name}</li>
+          <li>Name: {pokemon.name}, Weight: {pokemon.weight}, Height: {pokemon.height}</li>
         </div>
       )
     })
