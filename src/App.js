@@ -120,51 +120,9 @@ class App extends Component{
           <div>Badges Won: {this.state.badgesWon}</div>
         </div>
         <br />
-        <form onSubmit={this.handleSubmit}>
 
-          <label htmlFor="team-name">Team Name</label>
-          <input 
-            onInput={this.handleUserInput} 
-            value={this.state.teamName} 
-            type="text" 
-            name="teamName" 
-            id="team-name" 
-          />
-          
-          <br />
-          <label htmlFor="trainer-name">Trainer Name</label>
-          <input 
-            onInput={this.handleUserInput} 
-            value={this.state.trainerName} 
-            type="text" 
-            name="trainerName" 
-            id="trainer-name"
-          />
-          
-          <br />
-          <label htmlFor="games-won">Games Won</label>
-          <input 
-            onInput={this.handleUserInput} 
-            value={this.state.gamesWon} 
-            type="number" 
-            name="gamesWon" 
-            id="games-won" 
-          />
+        <Form />
 
-          <br />
-          <label htmlFor="badges-won">Badges Won</label>
-          <input 
-            onInput={this.handleUserInput} 
-            value={this.state.badgesWon} 
-            type="number" 
-            name="badgesWon" 
-            id="badges-won" 
-          />
-
-          <br />
-          <button type="submit">Submit</button>
-        </form>
-        
         <h3>Pokemon in team</h3>
         <div id="pokemon-team-container">
           { pokemonTeamElArr }
