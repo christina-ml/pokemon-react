@@ -79,7 +79,8 @@ class App extends Component{
           <div>Games Lost:</div>
           <div>Home Gym:</div>
         </div>
-        <form>
+        <br />
+        <form onSubmit="">
           <label htmlFor="team-name">Team Name</label>
           <input type="text" value="" id="team-name" />
           <br />
@@ -91,6 +92,8 @@ class App extends Component{
           <br />
           <label htmlFor="badges-won">Badges Won</label>
           <input type="number" value="" id="badges-won" />
+          <br />
+          <button type="submit">Submit</button>
         </form>
         
         <h3>Pokemon in team</h3>
