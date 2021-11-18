@@ -79,6 +79,10 @@ class App extends Component{
           <div>Games Lost:</div>
           <div>Home Gym:</div>
         </div>
+        <form>
+          <label htmlFor="team-name"></label>
+          <input type="text" value="" id="team-name" />
+        </form>
         
         <h3>Pokemon in team</h3>
         <div id="pokemon-team-container">
