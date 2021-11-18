@@ -3,7 +3,47 @@ import { Component } from "react";
 class Form extends Component {
     constructor(){
         super();
-    }
+        this.state = {
+          teamName: 'N/A',
+          trainerName: 'N/A',
+          gamesWon: 0,
+          badgesWon: 0,
+        }
+
+        // handleTeamNameInput=(e)=>{
+  //   this.setState({
+  //     teamName: e.target.value,
+  //   })
+  // }
+
+  // handleTrainerNameInput=(e)=>{
+  //   this.setState({
+  //     trainerName: e.target.value,
+  //   })
+  // }
+
+  // handleGamesWonInput=(e)=>{
+  //   this.setState({
+  //     gamesWon: e.target.value,
+  //   })
+  // }
+
+  // handleBadgesWonInput=(e)=>{
+  //   this.setState({
+  //     badgesWon: e.target.value,
+  //   })
+  // }
+
+  /* 
+  - One method for all of them, generically handleUserInput 
+  - your name must match exactly what's in your state.
+  - To have a dynamic key, use square brackets. This was in the Skills Lab - how to create a dynamic key and an object.
+  */
+  handleUserInput=(e)=>{
+    this.setState({
+      [e.target.name]: e.target.value,
+    })
+  }
 
     render(){
         return(

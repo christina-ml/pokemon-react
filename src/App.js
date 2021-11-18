@@ -9,11 +9,6 @@ class App extends Component{
     this.state = {
       pokemonList: data.pokemon,
       teamList: [],
-      
-      teamName: 'N/A',
-      trainerName: 'N/A',
-      gamesWon: 0,
-      badgesWon: 0,
 
       teamWeight: 0,
       teamAtk: 0,
@@ -42,41 +37,6 @@ class App extends Component{
     alert("Submitted")
     // console.log("You have submitted your team details");
     // console.log(`Team Name: ${this.state.teamName}, Trainer Name: ${this.state.trainerName}`)
-  }
-
-  // handleTeamNameInput=(e)=>{
-  //   this.setState({
-  //     teamName: e.target.value,
-  //   })
-  // }
-
-  // handleTrainerNameInput=(e)=>{
-  //   this.setState({
-  //     trainerName: e.target.value,
-  //   })
-  // }
-
-  // handleGamesWonInput=(e)=>{
-  //   this.setState({
-  //     gamesWon: e.target.value,
-  //   })
-  // }
-
-  // handleBadgesWonInput=(e)=>{
-  //   this.setState({
-  //     badgesWon: e.target.value,
-  //   })
-  // }
-
-  /* 
-  - One method for all of them, generically handleUserInput 
-  - your name must match exactly what's in your state.
-  - To have a dynamic key, use square brackets. This was in the Skills Lab - how to create a dynamic key and an object.
-  */
-  handleUserInput=(e)=>{
-    this.setState({
-      [e.target.name]: e.target.value,
-    })
   }
 
   render(){
@@ -125,11 +85,6 @@ class App extends Component{
         {/* Add props to Form, to pass them to Form.js */}
         <Form 
           handleSubmit={this.handleSubmit}
-          handleUserInput={this.handleUserInput}
-          teamName={this.state.teamName}
-          trainerName={this.state.trainerName}
-          gamesWon={this.state.gamesWon}
-          badgesWon={this.state.badgesWon}
         />
 
         <h3>Pokemon in team</h3>
