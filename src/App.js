@@ -46,7 +46,7 @@ class App extends Component{
 
     let pokemonTeamElArr = this.state.teamList.map((pokemon)=>{
       return (
-        <div>
+        <div className="pokemon-team-item-container">
           <img src={pokemon.image} alt="pokemon image" />
           <div>{pokemon.name}</div>
         </div>
@@ -58,8 +58,10 @@ class App extends Component{
         <h1>Pokémon React Code Along</h1>
 
         <h2>Team List</h2>
+          <div id="pokemon-team-container">
           { pokemonTeamElArr }
-
+          </div>
+            
         <div id="pokemon-list-container">
           { pokemonNameElArr }
         </div>
