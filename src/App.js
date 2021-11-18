@@ -36,6 +36,11 @@ class App extends Component{
     })
   }
 
+  handleSubmit=(e)=>{
+    e.preventDefault();
+    console.log("trigger");
+  }
+
   render(){
     let pokemonNameElArr = this.state.pokemonList.filter((poke)=>poke.id < 20).map((pokemon)=>{
       let { image, name, weight, height, hp, atk, def } = pokemon;
@@ -80,7 +85,7 @@ class App extends Component{
           <div>Home Gym:</div>
         </div>
         <br />
-        <form onSubmit="">
+        <form onSubmit={this.handleSubmit}>
           <label htmlFor="team-name">Team Name</label>
           <input type="text" value="" id="team-name" />
           <br />
