@@ -66,4 +66,6 @@ this.state.teamName
 
 etc.. 
 We could pass all these down as props.
+
+Destructuring could be useful too, but let's keep it simple for now & use this.props...
 */
