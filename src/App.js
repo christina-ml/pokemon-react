@@ -46,7 +46,10 @@ class App extends Component{
 
     let pokemonTeamElArr = this.state.teamList.map((pokemon)=>{
       return (
-        <img src={pokemon.image} alt="pokemon image" />
+        <div>
+          <img src={pokemon.image} alt="pokemon image" />
+          <div>{pokemon.name}</div>
+        </div>
       )
     })
 
