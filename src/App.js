@@ -53,6 +53,18 @@ class App extends Component{
     })
   }
 
+  handleGamesWonInput=(e)=>{
+    this.setState({
+      gamesWon: e.target.value,
+    })
+  }
+
+  handleBadgesWonInput=(e)=>{
+    this.setState({
+      badgesWon: e.target.value,
+    })
+  }
+
   render(){
     let pokemonNameElArr = this.state.pokemonList.filter((poke)=>poke.id < 20).map((pokemon)=>{
       let { image, name, weight, height, hp, atk, def } = pokemon;
@@ -119,6 +131,8 @@ class App extends Component{
           <br />
           <label htmlFor="games-won">Games Won</label>
           <input 
+            onInput={this.handleGamesWonInput} 
+            value={this.state.gamesWon} 
             type="number" 
             name="games-won" 
             id="games-won" 
@@ -127,6 +141,8 @@ class App extends Component{
           <br />
           <label htmlFor="badges-won">Badges Won</label>
           <input 
+            onInput={this.handleBadgesWonInput} 
+            value={this.state.badgesWon} 
             type="number" 
             name="badges-won" 
             id="badges-won" 
