@@ -32,11 +32,9 @@ class App extends Component{
     })
   }
 
-  handleSubmit=(e)=>{
+  handleSubmit=(e, teamName, trainerName, gamesWon, badgesWon)=>{
     e.preventDefault();
-    alert("Submitted")
-    // console.log("You have submitted your team details");
-    // console.log(`Team Name: ${this.state.teamName}, Trainer Name: ${this.state.trainerName}`)
+    console.log(teamName, trainerName, gamesWon, badgesWon);
   }
 
   render(){

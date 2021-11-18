@@ -4,55 +4,57 @@ class Form extends Component {
     constructor(){
         super();
         this.state = {
-          teamName: 'N/A',
-          trainerName: 'N/A',
-          gamesWon: 0,
-          badgesWon: 0,
+            teamName: 'N/A',
+            trainerName: 'N/A',
+            gamesWon: 0,
+            badgesWon: 0,
         }
+    }
 
-        // handleTeamNameInput=(e)=>{
-  //   this.setState({
-  //     teamName: e.target.value,
-  //   })
-  // }
+    // handleTeamNameInput=(e)=>{
+    //   this.setState({
+    //     teamName: e.target.value,
+    //   })
+    // }
 
-  // handleTrainerNameInput=(e)=>{
-  //   this.setState({
-  //     trainerName: e.target.value,
-  //   })
-  // }
+    // handleTrainerNameInput=(e)=>{
+    //   this.setState({
+    //     trainerName: e.target.value,
+    //   })
+    // }
 
-  // handleGamesWonInput=(e)=>{
-  //   this.setState({
-  //     gamesWon: e.target.value,
-  //   })
-  // }
+    // handleGamesWonInput=(e)=>{
+    //   this.setState({
+    //     gamesWon: e.target.value,
+    //   })
+    // }
 
-  // handleBadgesWonInput=(e)=>{
-  //   this.setState({
-  //     badgesWon: e.target.value,
-  //   })
-  // }
+    // handleBadgesWonInput=(e)=>{
+    //   this.setState({
+    //     badgesWon: e.target.value,
+    //   })
+    // }
 
-  /* 
-  - One method for all of them, generically handleUserInput 
-  - your name must match exactly what's in your state.
-  - To have a dynamic key, use square brackets. This was in the Skills Lab - how to create a dynamic key and an object.
-  */
-  handleUserInput=(e)=>{
-    this.setState({
-      [e.target.name]: e.target.value,
-    })
-  }
+    /* 
+    - One method for all of them, generically handleUserInput 
+    - your name must match exactly what's in your state.
+    - To have a dynamic key, use square brackets. This was in the Skills Lab - how to create a dynamic key and an object.
+    */
+    handleUserInput=(e)=>{
+        this.setState({
+        [e.target.name]: e.target.value,
+        })
+    }
 
+    /* Passing in these 4 things as arguments into handleSubmit */
     render(){
         return(
-            <form onSubmit={this.props.handleSubmit}>
+            <form onSubmit={(e)=>this.props.handleSubmit(e, this.state.teamName, this.state.trainerName, this.state.gamesWon, this.state.badgesWon)}>
 
             <label htmlFor="team-name">Team Name</label>
             <input 
-                onInput={this.props.handleUserInput} 
-                value={this.props.teamName} 
+                onInput={this.handleUserInput} 
+                value={this.state.teamName} 
                 type="text" 
                 name="teamName" 
                 id="team-name" 
@@ -61,8 +63,8 @@ class Form extends Component {
             <br />
             <label htmlFor="trainer-name">Trainer Name</label>
             <input 
-                onInput={this.props.handleUserInput} 
-                value={this.props.trainerName} 
+                onInput={this.handleUserInput} 
+                value={this.state.trainerName} 
                 type="text" 
                 name="trainerName" 
                 id="trainer-name"
@@ -71,8 +73,8 @@ class Form extends Component {
             <br />
             <label htmlFor="games-won">Games Won</label>
             <input 
-                onInput={this.props.handleUserInput} 
-                value={this.props.gamesWon} 
+                onInput={this.handleUserInput} 
+                value={this.state.gamesWon} 
                 type="number" 
                 name="gamesWon" 
                 id="games-won" 
@@ -81,8 +83,8 @@ class Form extends Component {
             <br />
             <label htmlFor="badges-won">Badges Won</label>
             <input 
-                onInput={this.props.handleUserInput} 
-                value={this.props.badgesWon} 
+                onInput={this.handleUserInput} 
+                value={this.state.badgesWon} 
                 type="number" 
                 name="badgesWon" 
                 id="badges-won" 
