@@ -47,6 +47,11 @@ class App extends Component{
     return(
       <div className="app" id="app-container">
         <h1>Pokémon React Code Along</h1>
+
+        <h2>Team List</h2>
+          {/* {[{}{}}]} // can't do this */}
+          {[<div>Hello</div>, <div>World</div>]}
+
         <div id="pokemon-list-container">
           { pokemonNameElArr }
         </div>
