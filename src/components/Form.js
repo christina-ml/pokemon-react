@@ -11,8 +11,8 @@ class Form extends Component {
 
             <label htmlFor="team-name">Team Name</label>
             <input 
-                onInput={this.handleUserInput} 
-                value={this.state.teamName} 
+                onInput={this.props.handleUserInput} 
+                value={this.props.teamName} 
                 type="text" 
                 name="teamName" 
                 id="team-name" 
@@ -21,8 +21,8 @@ class Form extends Component {
             <br />
             <label htmlFor="trainer-name">Trainer Name</label>
             <input 
-                onInput={this.handleUserInput} 
-                value={this.state.trainerName} 
+                onInput={this.props.handleUserInput} 
+                value={this.props.trainerName} 
                 type="text" 
                 name="trainerName" 
                 id="trainer-name"
@@ -31,8 +31,8 @@ class Form extends Component {
             <br />
             <label htmlFor="games-won">Games Won</label>
             <input 
-                onInput={this.handleUserInput} 
-                value={this.state.gamesWon} 
+                onInput={this.props.handleUserInput} 
+                value={this.props.gamesWon} 
                 type="number" 
                 name="gamesWon" 
                 id="games-won" 
@@ -41,8 +41,8 @@ class Form extends Component {
             <br />
             <label htmlFor="badges-won">Badges Won</label>
             <input 
-                onInput={this.handleUserInput} 
-                value={this.state.badgesWon} 
+                onInput={this.props.handleUserInput} 
+                value={this.props.badgesWon} 
                 type="number" 
                 name="badgesWon" 
                 id="badges-won" 

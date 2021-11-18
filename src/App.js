@@ -1,6 +1,7 @@
 import { Component } from 'react';
 import './App.css';
 import data from './data/sortedData';
+import Form from './components/Form';
 
 class App extends Component{
   constructor(){
@@ -124,6 +125,11 @@ class App extends Component{
         {/* Add props to Form, to pass them to Form.js */}
         <Form 
           handleSubmit={this.handleSubmit}
+          handleUserInput={this.handleUserInput}
+          teamName={this.state.teamName}
+          trainerName={this.state.trainerName}
+          gamesWon={this.state.gamesWon}
+          badgesWon={this.state.badgesWon}
         />
 
         <h3>Pokemon in team</h3>
