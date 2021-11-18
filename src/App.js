@@ -120,8 +120,11 @@ class App extends Component{
           <div>Badges Won: {this.state.badgesWon}</div>
         </div>
         <br />
-
-        <Form />
+        
+        {/* Add props to Form, to pass them to Form.js */}
+        <Form 
+          handleSubmit={this.handleSubmit}
+        />
 
         <h3>Pokemon in team</h3>
         <div id="pokemon-team-container">
