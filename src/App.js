@@ -38,31 +38,41 @@ class App extends Component{
 
   handleSubmit=(e)=>{
     e.preventDefault();
-    console.log("trigger");
+    alert("Submitted")
+    // console.log("You have submitted your team details");
+    // console.log(`Team Name: ${this.state.teamName}, Trainer Name: ${this.state.trainerName}`)
   }
 
-  handleTeamNameInput=(e)=>{
-    this.setState({
-      teamName: e.target.value,
-    })
-  }
+  // handleTeamNameInput=(e)=>{
+  //   this.setState({
+  //     teamName: e.target.value,
+  //   })
+  // }
 
-  handleTrainerNameInput=(e)=>{
-    this.setState({
-      trainerName: e.target.value,
-    })
-  }
+  // handleTrainerNameInput=(e)=>{
+  //   this.setState({
+  //     trainerName: e.target.value,
+  //   })
+  // }
 
-  handleGamesWonInput=(e)=>{
-    this.setState({
-      gamesWon: e.target.value,
-    })
-  }
+  // handleGamesWonInput=(e)=>{
+  //   this.setState({
+  //     gamesWon: e.target.value,
+  //   })
+  // }
 
-  handleBadgesWonInput=(e)=>{
+  // handleBadgesWonInput=(e)=>{
+  //   this.setState({
+  //     badgesWon: e.target.value,
+  //   })
+  // }
+
+  /* One method for all of them, generically handleUserInput */
+  handleUserInput=(e)=>{
     this.setState({
-      badgesWon: e.target.value,
+      [e.target.name]: e.target.value,
     })
+    // console.log(e.target.name)
   }
 
   render(){
@@ -111,40 +121,40 @@ class App extends Component{
 
           <label htmlFor="team-name">Team Name</label>
           <input 
-            onInput={this.handleTeamNameInput} 
+            onInput={this.handleUserInput} 
             value={this.state.teamName} 
             type="text" 
-            name="team-name" 
+            name="teamName" 
             id="team-name" 
           />
           
           <br />
           <label htmlFor="trainer-name">Trainer Name</label>
           <input 
-            onInput={this.handleTrainerNameInput} 
+            onInput={this.handleUserInput} 
             value={this.state.trainerName} 
             type="text" 
-            name="trainer-name" 
+            name="trainerName" 
             id="trainer-name"
           />
           
           <br />
           <label htmlFor="games-won">Games Won</label>
           <input 
-            onInput={this.handleGamesWonInput} 
+            onInput={this.handleUserInput} 
             value={this.state.gamesWon} 
             type="number" 
-            name="games-won" 
+            name="gamesWon" 
             id="games-won" 
           />
 
           <br />
           <label htmlFor="badges-won">Badges Won</label>
           <input 
-            onInput={this.handleBadgesWonInput} 
+            onInput={this.handleUserInput} 
             value={this.state.badgesWon} 
             type="number" 
-            name="badges-won" 
+            name="badgesWon" 
             id="badges-won" 
           />
 
