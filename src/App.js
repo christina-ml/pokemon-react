@@ -80,8 +80,17 @@ class App extends Component{
           <div>Home Gym:</div>
         </div>
         <form>
-          <label htmlFor="team-name"></label>
+          <label htmlFor="team-name">Team Name</label>
           <input type="text" value="" id="team-name" />
+          <br />
+          <label htmlFor="trainer-name">Trainer Name</label>
+          <input type="text" value="" id="trainer-name" />
+          <br />
+          <label htmlFor="games-won">Games Won</label>
+          <input type="number" value="" id="games-won" />
+          <br />
+          <label htmlFor="badges-won">Badges Won</label>
+          <input type="number" value="" id="badges-won" />
         </form>
         
         <h3>Pokemon in team</h3>
