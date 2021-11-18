@@ -61,7 +61,8 @@ class App extends Component{
           <div id="pokemon-team-container">
           { pokemonTeamElArr }
           </div>
-            
+
+        <h2>Pokédex</h2> 
         <div id="pokemon-list-container">
           { pokemonNameElArr }
         </div>
