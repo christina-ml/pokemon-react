@@ -7,10 +7,20 @@ class App extends Component{
     super();
     this.state = {
       pokemonList: data.pokemon,
+      teamList: [],
     }
   }
   
+  /*
+  - Our way of copying & creating a new array - using the spread operator. And then add our `pokemon`.
+  - take every element and put it inside of a new array, and add our pokemon at the end of it.
+  */
   handlePokemonClick=(pokemon)=>{
+    let newArr = [...this.state.teamList, pokemon]
+
+    this.setState({
+      teamList: newArr,
+    })
   }
 
   render(){
