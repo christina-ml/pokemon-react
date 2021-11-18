@@ -47,6 +47,12 @@ class App extends Component{
     })
   }
 
+  handleTrainerNameInput=(e)=>{
+    this.setState({
+      trainerName: e.target.value,
+    })
+  }
+
   render(){
     let pokemonNameElArr = this.state.pokemonList.filter((poke)=>poke.id < 20).map((pokemon)=>{
       let { image, name, weight, height, hp, atk, def } = pokemon;
@@ -92,23 +98,41 @@ class App extends Component{
         <form onSubmit={this.handleSubmit}>
 
           <label htmlFor="team-name">Team Name</label>
-          <input onInput={this.handleTeamNameInput} 
+          <input 
+            onInput={this.handleTeamNameInput} 
             value={this.state.teamName} 
             type="text" 
             name="team-name" 
             id="team-name" 
           />
           
-          {/* <br />
+          <br />
           <label htmlFor="trainer-name">Trainer Name</label>
-          <input type="text" name="trainer-name" id="trainer-name" />
+          <input 
+            onInput={this.handleTrainerNameInput} 
+            value={this.state.trainerName} 
+            type="text" 
+            name="trainer-name" 
+            id="trainer-name"
+          />
+          
           <br />
           <label htmlFor="games-won">Games Won</label>
-          <input type="number" name="games-won" id="games-won" />
+          <input 
+            type="number" 
+            name="games-won" 
+            id="games-won" 
+          />
+
           <br />
           <label htmlFor="badges-won">Badges Won</label>
-          <input type="number" name="badges-won" id="badges-won" />
-          <br /> */}
+          <input 
+            type="number" 
+            name="badges-won" 
+            id="badges-won" 
+          />
+
+          <br />
           <button type="submit">Submit</button>
         </form>
         
