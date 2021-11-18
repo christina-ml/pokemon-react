@@ -1,10 +1,12 @@
-#pokemon-list-container{
+#pokemon-list-container,
+#pokemon-team-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   background-color: cornflowerblue;
 }
 
-.pokemon-item-container{
+.pokemon-item-container,
+.pokemon-team-item-container {
   padding: 25px;
   margin: 25px;
   background-color: white;
