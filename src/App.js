@@ -65,13 +65,15 @@ class App extends Component{
 
         <h2>Team Details</h2>
         
-        Team Name
-        Games Won
-        Games Lost
-        Trainer Name
-        Badges Won
-        Home Gym
-
+        <div>
+          <div>Team Name</div>
+          <div>Games Won</div>
+          <div>Games Lost</div>
+          <div>Trainer Name</div>
+          <div>Badges Won</div>
+          <div>Home Gym</div>
+        </div>
+        
         <h3>Pokemon in team</h3>
         <div id="pokemon-team-container">
           { pokemonTeamElArr }
