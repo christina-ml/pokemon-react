@@ -9,10 +9,10 @@ class App extends Component{
       pokemonList: data.pokemon,
       teamList: [],
       
-      teamName: '',
-      trainerName: '',
+      teamName: 'N/A',
+      trainerName: 'N/A',
       gamesWon: 0,
-      badgesWon: 0, 
+      badgesWon: 0,
 
       teamWeight: 0,
       teamAtk: 0,
@@ -72,12 +72,12 @@ class App extends Component{
         <h2>Team Details</h2>
 
         <div>
-          <div>Team Name</div>
-          <div>Trainer Name</div>
-          <div>Games Won</div>
-          <div>Badges Won</div>
-          <div>Games Lost</div>
-          <div>Home Gym</div>
+          <div>Team Name: {this.state.teamName}</div>
+          <div>Trainer Name: {this.state.trainerName}</div>
+          <div>Games Won: {this.state.gamesWon}</div>
+          <div>Badges Won: {this.state.badgesWon}</div>
+          <div>Games Lost:</div>
+          <div>Home Gym:</div>
         </div>
         
         <h3>Pokemon in team</h3>
