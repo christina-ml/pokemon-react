@@ -67,12 +67,15 @@ class App extends Component{
   //   })
   // }
 
-  /* One method for all of them, generically handleUserInput */
+  /* 
+  - One method for all of them, generically handleUserInput 
+  - your name must match exactly what's in your state.
+  - To have a dynamic key, use square brackets. This was in the Skills Lab - how to create a dynamic key and an object.
+  */
   handleUserInput=(e)=>{
     this.setState({
       [e.target.name]: e.target.value,
     })
-    // console.log(e.target.name)
   }
 
   render(){
