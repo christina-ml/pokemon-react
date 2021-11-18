@@ -8,6 +8,12 @@ class App extends Component{
     this.state = {
       pokemonList: data.pokemon,
       teamList: [],
+      
+      teamName: '',
+      trainerName: '',
+      gamesWon: 0,
+      badgesWon: 0, 
+
       teamWeight: 0,
       teamAtk: 0,
       teamHp: 0,
@@ -64,13 +70,13 @@ class App extends Component{
         <h1>Pokémon React Code Along</h1>
 
         <h2>Team Details</h2>
-        
+
         <div>
           <div>Team Name</div>
-          <div>Games Won</div>
-          <div>Games Lost</div>
           <div>Trainer Name</div>
+          <div>Games Won</div>
           <div>Badges Won</div>
+          <div>Games Lost</div>
           <div>Home Gym</div>
         </div>
         
